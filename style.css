@@ -1,0 +1,189 @@
+/* Body */
+body {
+  margin: 0px;
+}
+
+/* Outer container */
+.outer-container {
+  background-color: #f2f2f2;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Inner container */
+.inner-container {
+  background-color: white;
+  padding: 8px;
+  box-sizing: border-box; 
+}
+
+/* Header Flex */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Booking Options Styling */
+.booking-options {
+  display: flex;
+  gap: 10px;
+}
+.booking-options label {
+  margin-right: 10px;
+  cursor: pointer; /* Make the label clickable */
+}
+
+.booking-options label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.booking-options label span {
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+  color:gray;
+}
+
+.booking-options label:hover span {
+  background-color: #e6e6e6; /* Add hover effect to the options */
+}
+
+.booking-options label input[type="radio"]:checked +span {
+  background-color: #ddd; /* Add selected effect to the options */
+  color: black;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  width: 60px;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  border: 1px solid gray;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn i {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+/* Input Feilds styling */
+.input-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 10% 15%; 
+  gap: 10px;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"],
+.input-container input[type="time"] {
+  height: 40px;
+}
+
+.input-container input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="time"]:focus {
+  border-color: blue;
+  outline: none;
+}
+
+.input-container input[type="time"] {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Passengers Counter button styling */
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  gap: 5px;
+  height: 38px;
+}
+
+.counter input[type="text"] {
+  text-align: center;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 30px
+}
+
+.counter button {
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+/* Search button styling */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+/* .search-container {
+  flex-shrink: 0;
+} */
+
+.search-btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

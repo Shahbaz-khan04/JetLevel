@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="outer-container">
+      <div class="inner-container">
+        <form id="booking-form">
+          <div class="top-bar">
+            <!-- Booking options -->
+            <div class="booking-options">
+              <label>
+                <input
+                  type="radio"
+                  name="booking-option"
+                  value="one-way"
+                  checked
+                />
+                <span>One Way</span>
+              </label>
+              <label>
+                <input type="radio" name="booking-option" value="round-trip" />
+                <span>Round Trip</span>
+              </label>
+              <label>
+                <input type="radio" name="booking-option" value="multi-city" />
+                <span>Multi City</span>
+              </label>
+              <label>
+                <input type="radio" name="booking-option" value="empty-legs" />
+                <span>Empty Legs</span>
+              </label>
+            </div>
+            <!-- Drop Down Menu -->
+            <div class="dropdown">
+              <button class="dropdown-btn"><span class="dropdown-text">FAH</span><i style="font-size:18px" class="fa">&#xf107;</i></button>
+              <div class="dropdown-content">
+                <a href="#">FAH</a>
+                <a href="#">SAI</a>
+                <a href="#">SHA</a>
+                <a href="#">ASD</a>
+              </div>
+            </div>
+          </div>
+          <!-- Input fields -->
+          <div class="input-container">
+            <input type="text" id="from" name="from" placeholder="From" />
+            <input type="text" id="to" name="to" placeholder="To" />
+            <input type="date" id="date" name="date" />
+            <input type="time" id="time" name="time" />
+            <!-- Counter -->
+            <div class="counter">
+              <button type="button" class="minus-btn">-</button>
+              <input
+                type="text"
+                id="passengers"
+                name="passengers"
+                value="1"
+                readonly
+              />
+              <button type="button" class="plus-btn">+</button>
+            </div>
+            
+          </div>
+          <!-- Search Button -->
+          <div class="search-container">
+            <button type="submit" class="search-btn">Search</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
